@@ -4,9 +4,21 @@ import 'package:quiz_app/start_screen.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        body: StartScreen(),
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 78, 13, 151),
+                Color.fromARGB(255, 151, 65, 209),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+          child: const StartScreen(),
+        ),
       ),
     ),
   );
